@@ -1,0 +1,56 @@
+<%- include('../layouts/header') %>
+
+<div class="container">
+    <div class="heading">
+        <h1 style="font-weight: bold;">DASHBOARD</h1>
+    </div>
+    <a style="text-align: center;" href="/" class="btn btn-success">Back-To-Home</a>
+    <h1 style="text-align: center; color: rgb(5, 141, 116);"">HEY!!! <b style="color: rgb(10, 1, 8);"> <%=  all_data.name %> </b>   </h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">age</th>
+                <th scope="col">Email</th>
+             
+                <th scope="col" style="color: red;">Action</th>
+            </tr>
+
+
+
+
+            <tr>
+
+
+                <td> <img src="/uploads/<%= all_data.image %>" width="80" height="80"> </td>
+                <td><%=  all_data.name %> </td>
+                <td><%=  all_data.age %> </td>
+                <td><%=  all_data.email %> </td>
+               
+                <td><a  href="/changePassword" class="btn btn-danger">CHANGE PASSWORD</a></td>
+                <td><a  href="/logout" class="btn btn-info">LOGOUT</a></td>
+               
+            </tr>
+            
+            
+
+
+        </thead>
+       
+        </tbody>
+        
+    </table>
+  
+
+
+</div>
+
+
+
+
+
+
+
+<%- include('../layouts/footer') %>

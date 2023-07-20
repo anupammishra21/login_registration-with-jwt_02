@@ -1,0 +1,49 @@
+<%- include('../layouts/header') %>
+
+<div class="registration-form">
+
+    <% if(error.length) {%>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>error</strong> <%= error %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <% } %>
+
+
+    <a style="text-align: center;" href="/dashboard" class="btn btn-success">Back-To-Dashboard</a>
+
+
+
+    <form method="post" action="/updatePassword">
+        <div class="form-icon">
+            <span><i class="icon icon-user"></i></span>
+            <!-- <div class="heading">Registration</div> -->
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control item" id="oldPassword" name="oldPassword"
+                placeholder="Enter old password">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control item" id="newPassword" name="newPassword"
+                placeholder="Enter new Password">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control item" id="confirmPassword" name="confirmPassword"
+                placeholder="confirm your Password">
+        </div>
+
+
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-block create-account">Save</button>
+        </div>
+
+    </form>
+
+
+    <%- include('../layouts/footer') %>
